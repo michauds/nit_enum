@@ -1,0 +1,11 @@
+Grammar nit_enum:
+
+Lexer
+
+digit = '0' .. '9';
+letter = 'a' .. 'z' | 'A' .. 'Z';
+
+number = digit+;
+word = letter+;
+
+id = letter ( word | number )*;
