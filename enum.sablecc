@@ -4,8 +4,12 @@ Lexer
 
 digit = '0' .. '9';
 letter = 'a' .. 'z' | 'A' .. 'Z';
+blank = ' ' | #10 | #13 | #9;
 
 number = digit+;
 word = letter+;
-
 id = letter ( word | number )*;
+
+Ignored blank;
+
+enum = 'enum' id '{' (id ('=' id)? ',')* id '}' id ';'
