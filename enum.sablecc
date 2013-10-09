@@ -12,4 +12,4 @@ id = letter ( word | number )*;
 
 Ignored blank;
 
-enum = 'enum' id '{' (id ('=' id)? ',')* id '}' id ';'
+enum = 'enum' id '{' (id ('=' id)? ',')* id ('=' id)? '}' id ';'

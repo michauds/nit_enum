@@ -1,0 +1,54 @@
+C
+#define SPRING   0
+#define SUMMER   1
+#define FALL     2
+#define WINTER   3
+
+C++
+enum SEASON { SPRING = 0, SUMMER = 1, FALL = 2, WINTER = 3} ;
+
+
+Ruby
+class Color
+  BLUE=1
+  RED=2
+  GREEN=3
+  YELLOW=4
+  ORANGE=5
+  PURPLE=6
+end
+
+
+
+Python
+from enum import Enum
+class Color(Enum):
+	blue = 1
+	red = 2
+	green = 3
+	yellow = 4
+	orange = 5
+	purple = 6
+
+
+Java
+public enum Day {
+    SUNDAY = 0, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY 
+}
+
+
+
+Delphi
+ type
+   TDay = (Mon=1, Tue, Wed, Thu, Fri, Sat, Sun);   // Enumeration values
+ var
+   day   : TDay;          // Enumeration variable
+
+
+
+
+
+
+
+enum = kwenum string '{' (string ('=' string)? ',')* string ('=' string)? '}' string ';'
