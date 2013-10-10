@@ -4,8 +4,28 @@ C
 #define FALL     2
 #define WINTER   3
 
-C++
++
+explicit clé + valeur
+-
+redondant #define
+doit definir une valeur
+pas vraiment enum
+
+
+
+C++/Objective C/C#
 enum SEASON { SPRING = 0, SUMMER = 1, FALL = 2, WINTER = 3} ;
+
++
+nommé
+assigné un type
+possibilité d'assigner des valeurs différents du défaut
+-
+curly brackets (problème avec Nit)
+; à la fin
+
+~
+Plus "universel" par rapport à Nit
 
 
 Ruby
@@ -18,9 +38,29 @@ class Color
   PURPLE=6
 end
 
++
+compact / court
+possibilité d'assigner des valeurs différents du défaut
+-
+Hack, pas un vrai enum
 
 
-Python
+~
+Plus "classe" par rapport à Nit
+
+Python (old)
+from enum import Enum
+Animal = Enum('Animal', 'ant bee cat dog')
++
+-
+lisibilité (trop compact)
+Devoir import Enum à chaque fois
+~
+Plus "classe" par rapport à Nit
+
+
+
+Python(new)
 from enum import Enum
 class Color(Enum):
 	blue = 1
@@ -29,6 +69,14 @@ class Color(Enum):
 	yellow = 4
 	orange = 5
 	purple = 6
+
++
+tres lisible
+
+-
+
+~
+Plus "classe" par rapport à Nit
 
 
 Java
@@ -51,4 +99,27 @@ Delphi
 
 
 
-enum = kwenum string '{' (string ('=' string)? ',')* string ('=' string)? '}' string ';'
+enum = enum string '{' (string ('=' string)? ',')* string ('=' string)? '}' string ';'
+
+
+
+
+enum Color
+	BLUE=1
+	RED=2
+	GREEN=3
+	YELLOW=4	
+	ORANGE=5
+	PURPLE=6
+end
+	
+
+
+color = enum
+	BLUE=1
+	RED=2
+	GREEN=3
+	YELLOW=4	
+	ORANGE=5
+	PURPLE=6
+end

@@ -1,15 +1,10 @@
-Grammar nit_enum:
+Parser
 
-Lexer
+enum = 'enum' id eol_helper values 'end';
 
-digit = '0' .. '9';
-letter = 'a' .. 'z' | 'A' .. 'Z';
-blank = ' ' | #10 | #13 | #9;
+{id:} str_char+;
+{values:} (id ('=' id)? eol_helper)+
 
-number = digit+;
-word = letter+;
-id = letter ( word | number )*;
 
-Ignored blank;
 
-enum = 'enum' id '{' (id ('=' id)? ',')* id ('=' id)? '}' id ';'
+enum = id '=' 'enum' eol_helper values 'end';
