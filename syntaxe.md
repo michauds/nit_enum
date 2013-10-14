@@ -123,13 +123,13 @@ enum SEASON {
 ```
 
 ####Avantages
--Forme simple et facile à lire
--Possibilité d'assigner des valeurs différentes de celles par défaut
--Possibilité d'assigner un type
+- Forme simple et facile à lire
+- Possibilité d'assigner des valeurs différentes de celles par défaut
+- Possibilité d'assigner un type
 
 ####Désavantages
--La présence d'accolades qui risque de causer des problèmes en Nit
--Le ';' à la fin qui pourrait être éviter
+- La présence d'accolades qui risque de causer des problèmes en Nit
+- Le ';' à la fin qui pourrait être éviter
 
 ### Ruby
 
