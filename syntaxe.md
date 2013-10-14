@@ -24,6 +24,12 @@ enum <Nom>
 end
 ```
 
+Pour accéder aux valeurs, il suffit d'écrire la ligne suivante:
+
+```
+Nom:clé
+```
+
 Voici un exemple:
 
 ```
@@ -35,6 +41,8 @@ enum B
     b = "je suis un string"
     d = 'C'
 end
+
+print B:b // Afficherait "je suis un string"
 ```
 
 Dans cet exemple, les enums ont des clés de même nom, mais des valeurs 
@@ -84,15 +92,19 @@ enum Os
 end
 enum Libs
     super Arch * Os
+
+    common = "fibonacci,int_stack"
 end
 ```
 
 Ensuite, pour importer la bonne librairie on pourrait faire:
 
 ```
-if host == Libs.amd64.gnu then
+if host == Libs:amd64.gnu then
     import amd64_gnu_lib
 end
+
+import Libs:common
 ```
 
 Une difficulté à laquelle nous avons pensé c'est comment baliser le 
