@@ -113,7 +113,7 @@ pour l'implémentation du enum en Nit.
 
 Voici un exemple du enum dans ces langages :
 
-```
+```c
 enum SEASON {
 	SPRING = 0,
 	SUMMER = 1,
@@ -135,8 +135,7 @@ enum SEASON {
 
 Voici un exemple du enum en Ruby :
 
-```
-Ruby
+```ruby
 class Color
 	BLUE=1
 	RED=2
@@ -158,7 +157,7 @@ end
 
 Voici un exemple du enum en Python (vielle version) :
 
-```
+```python
 from enum import Enum
 Animal = Enum('Animal', 'ant bee cat dog')
 ```
@@ -171,7 +170,7 @@ Animal = Enum('Animal', 'ant bee cat dog')
 
 Voici un autre exemple du enum en Python (nouvelle version) :
 
-```
+```python
 from enum import Enum
 class Color(Enum):
 	blue = 1
@@ -193,7 +192,7 @@ class Color(Enum):
 ### Java
 Voici un exemple du enum en Java :
 
-```
+```java
 public enum Day {
     SUNDAY = 0, MONDAY, TUESDAY, WEDNESDAY,
     THURSDAY, FRIDAY, SATURDAY 
@@ -210,7 +209,7 @@ public enum Day {
 ### Delphi
 Voici un exemple du enum en Delphi :
 
-```
+```delphi
 type
 	TDay = (Mon=1, Tue, Wed, Thu, Fri, Sat, Sun);   // Enumeration values
 var
