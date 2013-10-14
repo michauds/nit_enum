@@ -105,13 +105,110 @@ déclaration.
 
 ## Étude de l'état de l'art
 
+Nous avons étudier les enums dans plusieurs langages de programmation en identifiant
+les avantages et désavantages de chacun afin de déterminer la forme la plus souhaitable
+pour l'implémentation du enum en Nit.
+
 ### C++ | Objective-C | C#
+
+Voici un exemple du enum dans ces langages :
+
+```
+enum SEASON {
+	SPRING = 0,
+	SUMMER = 1,
+	FALL = 2,
+	WINTER = 3
+};
+```
+
+####Avantages
+-Forme simple et facile à lire
+-Possibilité d'assigner des valeurs différentes de celles par défaut
+-Possibilité d'assigner un type
+
+####Désavantages
+-La présence d'accolades qui risque de causer des problèmes en Nit
+-Le ';' à la fin qui pourrait être éviter
 
 ### Ruby
 
+Voici un exemple du enum en Ruby :
+
+```
+Ruby
+class Color
+	BLUE=1
+	RED=2
+	GREEN=3
+	YELLOW=4
+	ORANGE=5
+	PURPLE=6
+end
+```
+
+####Avantages
+-Forme compact et court
+-Possibilité d'assigner des valeurs différentes de celles par défaut
+
+####Désavantages
+-Pas un vrai enum, car il est fait à partir d'une classe
+
 ### Python
 
+Voici un exemple du enum en Python (vielle version) :
+
+```
+from enum import Enum
+Animal = Enum('Animal', 'ant bee cat dog')
+```
+
+####Désavantages
+-Peu lisible (trop compact)
+-Nécessité d'importer enum
+-Impossibilité d'ajouter des valeurs différentes de celles par défaut
+
+
+Voici un autre exemple du enum en Python (nouvelle version) :
+
+```
+from enum import Enum
+class Color(Enum):
+	blue = 1
+	red = 2
+	green = 3
+	yellow = 4
+	orange = 5
+	purple = 6
+```
+
+####Avantages
+-Très lisible
+-Possibilité d'assigner des valeurs différentes de celles par défaut
+
+####Désavantages
+-Implémentation en forme de classe
+-Nécessité d'importer enum
+
+
+
 ### Java
+Voici un exemple du enum en Java :
+
+```
+public enum Day {
+    SUNDAY = 0, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY 
+}
+```
+
+####Avantages
+-Très lisible
+-Possibilité d'assigner des valeurs différentes de celles par défaut
+
+####Désavantages
+-La présence d'accolades qui risque de causer des problèmes en Nit
+
 
 ## Remerciements
 
