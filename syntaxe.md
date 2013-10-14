@@ -8,7 +8,9 @@ pour des enums. Par exemple, dans le fichier
 à la ligne 101, il existe une déclaration de token pour les mots-clés d'un enum et 
 à la ligne 236 la déclaration de sa production. La syntaxe que nous allons proposer
 est semblable à celle d'une déclaration de classe, alors nous ne croyons pas avoir
-de grandes modifications à la grammaire de Nit.
+de grandes modifications à la grammaire de Nit. Par contre, il faudra distinguer
+le 'universal' du 'enum' et faire suivre les changements sur les productions qui
+utilisaient ses tokens.
 
 ## Syntaxe proposée
 
