@@ -190,8 +190,6 @@ class Color(Enum):
 -Implémentation en forme de classe
 -Nécessité d'importer enum
 
-
-
 ### Java
 Voici un exemple du enum en Java :
 
@@ -209,6 +207,22 @@ public enum Day {
 ####Désavantages
 -La présence d'accolades qui risque de causer des problèmes en Nit
 
+### Delphi
+Voici un exemple du enum en Delphi :
+
+```
+type
+	TDay = (Mon=1, Tue, Wed, Thu, Fri, Sat, Sun);   // Enumeration values
+var
+	day : TDay;          // Enumeration variable
+```
+
+####Avantages
+-Possibilité d'assigner des valeurs différentes de celles par défaut
+
+####Désavantages
+-Séparation de la déclaration du type et de la variable
+-Structure moins lisible que d'autres
 
 ## Remerciements
 
