@@ -1,6 +1,6 @@
-#La syntaxe de l'énumeration
+# La syntaxe de l'énumeration
 
-##Analyse de la grammaire Nit
+## Analyse de la grammaire Nit
 
 Dans la grammaire de Nit, il existe présentement des tokens et des productions 
 pour des enums. Par exemple, dans le fichier 
@@ -10,12 +10,11 @@ pour des enums. Par exemple, dans le fichier
 est semblable à celle d'une déclaration de classe, alors nous ne croyons pas avoir
 de grandes modifications à la grammaire de Nit.
 
-##Syntaxe proposée
+## Syntaxe proposée
 
 Nous avons fait une analyse des énumerations dans d'autres langages afin de 
-proposer bonne syntaxe tout en suivant le "coding-style" de Nit. Suite à des
-discussions avec Alexis Laferrière, un des contributeurs au projet Nit, nous
-proposons la syntaxe suivante:
+proposer bonne syntaxe tout en suivant le "coding-style" de Nit. Après réflexion,
+nous proposons la syntaxe suivante:
 
 ```
 enum <Nom>
@@ -25,10 +24,26 @@ enum <Nom>
 end
 ```
 
-##Fonctionalité souhaitable
+Voici un exemple:
 
-Lors de nos discussions avec Alexis Laferrière, nous avons pensé à une 
-fonctionalité des énumérations qui serait souhaitable d'implémenter.
+```
+enum A
+    b
+    d
+end
+enum B
+    b = "je suis un string"
+    d = 'C'
+end
+```
+
+Dans cet exemple, les enums ont des clés de même nom, mais des valeurs 
+différents.
+
+## Fonctionalité souhaitable
+
+En pensant à des problèmes dans le dévelopement de logiciels, nous avons 
+pensé à une fonctionalité des énumérations qui serait souhaitable d'implémenter.
 Prenons le problème de distribution d'un logiciel dans l'écosystème
 informatique d'aujourd'hui avec plusieurs architectures et systèmes
 d'exploitation. Il peut rapidement devenir difficile de savoir quelle
@@ -71,10 +86,11 @@ enum Libs
     super Arch * Os
 end
 ```
+
 Ensuite, pour importer la bonne librairie on pourrait faire:
 
 ```
-if host == amd64.gnu then
+if host == Libs.amd64.gnu then
     import amd64_gnu_lib
 end
 ```
@@ -83,8 +99,21 @@ Une difficulté à laquelle nous avons pensé c'est comment baliser le
 comportement de cette jonction pour éviter que son utilisation devienne un
 fardeau pour l'utilisateur. Une possible solution auquel nous avons pensé c'est
 de forcer l'utilisateur qui désire profiter de cette fonctionalité à implémenter
-certaines fonctions contenus dans une interface.
+certaines fonctions contenus dans une interface. Il faudra aussi considérer une 
+modification de la production "superclass" pour accepter le '*' dans la
+déclaration.
 
-##Comparaison avec d'autres langages
+## Étude de l'état de l'art
 
+### C++ | Objective-C | C#
 
+### Ruby
+
+### Python
+
+### Java
+
+## Remerciements
+
+Nous aimerons remercier Alexis Laferrière pour son temps, ses conseil sur le 
+fonctionnement interne du langage Nit.
