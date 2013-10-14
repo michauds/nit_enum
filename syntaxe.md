@@ -147,11 +147,12 @@ end
 ```
 
 ####Avantages
--Forme compact et court
--Possibilité d'assigner des valeurs différentes de celles par défaut
+- Forme compact et court
+- Possibilité d'assigner des valeurs différentes de celles par défaut
+- Style semblable à Nit
 
 ####Désavantages
--Pas un vrai enum, car il est fait à partir d'une classe
+- Pas un vrai enum, car il est fait à partir d'une classe
 
 ### Python
 
@@ -163,9 +164,9 @@ Animal = Enum('Animal', 'ant bee cat dog')
 ```
 
 ####Désavantages
--Peu lisible (trop compact)
--Nécessité d'importer enum
--Impossibilité d'ajouter des valeurs différentes de celles par défaut
+- Peu lisible (trop compact)
+- Nécessité d'importer enum
+- Impossibilité d'ajouter des valeurs différentes de celles par défaut
 
 
 Voici un autre exemple du enum en Python (nouvelle version) :
@@ -182,12 +183,12 @@ class Color(Enum):
 ```
 
 ####Avantages
--Très lisible
--Possibilité d'assigner des valeurs différentes de celles par défaut
+- Très lisible
+- Possibilité d'assigner des valeurs différentes de celles par défaut
 
 ####Désavantages
--Implémentation en forme de classe
--Nécessité d'importer enum
+- Implémentation en forme de classe
+- Nécessité d'importer enum
 
 ### Java
 Voici un exemple du enum en Java :
@@ -200,11 +201,11 @@ public enum Day {
 ```
 
 ####Avantages
--Très lisible
--Possibilité d'assigner des valeurs différentes de celles par défaut
+- Très lisible
+- Possibilité d'assigner des valeurs différentes de celles par défaut
 
 ####Désavantages
--La présence d'accolades qui risque de causer des problèmes en Nit
+- La présence d'accolades qui risque de causer des problèmes en Nit
 
 ### Delphi
 Voici un exemple du enum en Delphi :
@@ -217,11 +218,11 @@ var
 ```
 
 ####Avantages
--Possibilité d'assigner des valeurs différentes de celles par défaut
+- Possibilité d'assigner des valeurs différentes de celles par défaut
 
 ####Désavantages
--Séparation de la déclaration du type et de la variable
--Structure moins lisible que d'autres
+- Séparation de la déclaration du type et de la variable
+- Structure moins lisible que d'autres
 
 ## Remerciements
 
