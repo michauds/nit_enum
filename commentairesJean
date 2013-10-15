@@ -1,0 +1,17 @@
+définir la nature de Clé
+    - niveau objet
+
+Laisser tomber l'implémentation du produit cartésien pour l'instant
+Avec la clé:
+    - Savoir 
+    - Est-ce que'elle possède un état
+        -Si oui, est-ce qu'elle est mutable ou non?&
+
+Est-ce que je peux mettre des méthodes dans les valeurs?
+Héritage des énums
+    - Est-ce qu'il peut implémenter une interface
+
+Énums en se moment en Nit
+
+Énums: commencer avec le minimum
+    - Énum avec un seul élément
