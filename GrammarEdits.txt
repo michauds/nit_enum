@@ -1,0 +1,44 @@
+\parser\lexer.nit
+
+
+redef class TKwenum
+    redef fun parser_index: Int
+    do
+	return 96
+    end
+
+    init init_tk(loc: Location)
+    do
+		_location = loc
+    end
+end
+	
+
+
+
+
+
+____
+					if accept_token == 96 then
+						return new TKwenum.init_tk(location)
+					end
+
+
+
+
+
+\parser\nit.sablecc3xx
+
+Dans Tokens
+
+kwenum = 'enum';
+
+
+enum {-> ???}
+	= kwenum
+
+
+
+
+
+(Utiliser propdef?)
