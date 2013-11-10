@@ -1,0 +1,20 @@
+Language enum;
+
+Lexer
+tab = #9;
+cr = #13;
+lf = #10;
+eol_helper = (cr lf) | (cr) | (lf);
+
+int = ('0'..'9')+ ;
+id = (('A'..'Z') | ('a'..'z') | int | '_' | '"' | '\'')+;
+
+blank = ' ' | tab;
+Ignored blank;
+
+Parser
+enum = {enum:} 'enum' ' ' id eol_helper values 'end';
+values = {many:} values value |
+		 {one:} value;
+value = {with:} id '=' id eol_helper |
+		{without:} id eol_helper;

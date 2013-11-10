@@ -1,10 +1,15 @@
+Language enum;
+
+Lexer
+str_char = [any - [['"' + '{'] + '\']] | '\' any;
+eol_helper = cr lf | cr | lf;
+id = str_char+;
+values = (id ('=' id)? eol_helper)+;
+blank = ' ' | #10 | #13 | #9;
+
+Ignored blank;
+
 Parser
 
 enum = 'enum' id eol_helper values 'end';
-
-{id:} str_char+;
-{values:} (id ('=' id)? eol_helper)+
-
-
-
 enum = id '=' 'enum' eol_helper values 'end';
