@@ -1,7 +1,7 @@
 \parser\lexer.nit
 
 
-redef class TKwenums
+redef class TKwenum
     redef fun parser_index: Int
     do
 	return 96
@@ -20,7 +20,7 @@ end
 
 ____
 					if accept_token == 96 then
-						return new TKwenums.init_tk(location)
+						return new TKwenum.init_tk(location)
 					end
 
 
@@ -31,11 +31,12 @@ ____
 
 Dans Tokens
 
-kwenum = 'enums';
+kwenum = 'universal';
+kwenum = 'enum';
 
 
 enum {-> ???}
-	= kwenums
+	= kwenum
 
 
 
