@@ -3,4 +3,4 @@ enum helloWorld
 	B = " "
 	C = "world"
 end
-print A + B + C
+print helloWorld:A + helloWorld:B + helloWorld:C
