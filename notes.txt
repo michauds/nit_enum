@@ -1,0 +1,15 @@
+scope.nit
+flow.nit
+typing.nit
+
+parser/parser_abs.nit
+
+
+AEnumClasskind
+
+
+
+abstract_compiler.nit
+	redef class AClassdef
+
+modelize_class
