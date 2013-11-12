@@ -15,3 +15,13 @@ Héritage des énums
 
 Énums: commencer avec le minimum
     - Énum avec un seul élément
+
+
+# part 2
+
+modifier le vrai frontend: frontend.nit
+jouer dans le model pour faire dekoi avec les valeurs qu'on stock
+modelize_class|property et typing (syntax/typing = vieux, src/typing = bon)
+
+créer des programmes test qui utilisent bien et mal les enums
+
