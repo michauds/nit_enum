@@ -1,0 +1,21 @@
+
+
+redef class ANewExpr
+
+naive_interpreter.nit
+abstract_compiler.nit
+typing.nit
+astbuilder.nit
+parser/parser_prod.nit (generated)
+parser/parser_nodes.nit
+parser/parser_abs.nit (generated)
+syntax/typing.nit
+syntax/icode_generation.nit
+
+
+
+
+redef fun build_signature
+(Pour changer l'écriture de nos enums?)
+
+modelize_property.nit
